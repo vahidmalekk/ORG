@@ -1,0 +1,42 @@
+#!/usr/bin/python3
+import sys
+
+
+def main():
+        sitename=sys.argv[1]
+        redirect=sys.argv[2]
+        schema=["http://","https://","//","////",]
+        after=["@","%40"]
+        before=["#"]
+        site=sitename.split(".")
+        host = site[-2]+"."+site[-1]
+        subs=str()
+        for i in range(len(site)-2):
+                if i == (len(site)-3):
+                        subs+=site[i]
+                else:
+                        subs+=site[i]+"."
+        for i in after:
+                for j in schema:
+                        print(f"{j}{sitename}{i}{redirect}")
+
+        for i in before:
+
+                for j in schema:
+                        print(f"{j}{redirect}{i}{host}")
+        for i in schema:
+                print(f"{i}{redirect}")
+        temp=""
+        for i in range(len(host)):
+                temp=""
+                ll=list(host)
+                if ll[i] == ".":
+                        continue
+                else:
+                        ll[i]="p"
+                        for c in ll:
+                                temp+=c
+                print(temp)
+
+
+main()
