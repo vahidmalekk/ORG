@@ -5,9 +5,9 @@ import sys
 def main():
         sitename=sys.argv[1]
         redirect=sys.argv[2]
-        schema=["///","//%2F/","http://","https://","//","////","\/","\/\/","\\"]
+        schema=["///","//%2F/","http://","https://","//","////","\\/","\\/\\/","\\\\"]
         after=["@","%40"]
-        before=["#","\.","%3F.","?c="]
+        before=["#","\\.","%3F.","?c="]
         site=sitename.split(".")
         host = site[-2]+"."+site[-1]
         subs=str()
