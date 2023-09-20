@@ -27,17 +27,7 @@ def main():
         for i in schema:
                 print(f"{i}{redirect}")
         
-        for i in range(len(host)):
-                temp=""
-                ll=list(host)
-                if ll[i] == ".":
-                    break
-                else:
-                        ll[i]="p"
-                        for c in ll:
-                                temp+=c
-                        for aa in schema:
-                            print(aa+temp)
+       
 
 
 main()
